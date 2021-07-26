@@ -1,0 +1,72 @@
+//primary color
+$b-cl: #000000;
+$w-cl: #fff;
+$g-cl: #898989;
+$dark-cl: #333;
+$light-cl: #fff;
+
+
+
+//color-text
+$t-b-cl: $b-cl;
+$t-w-cl: $w-cl;
+$t-g-cl: $g-cl;
+
+
+//color-background
+$bg-b-cl: $b-cl;
+$bg-w-cl: $w-cl;
+$bg-g-cl: $g-cl;
+
+
+//color design
+$main-cl: #253D8F;
+$main-cl-2: #F7B02D;
+$border-cl: #e1e1e1;
+$g-E5E5-cl:#E5E5E5;
+$g-E3E3-cl:#E3E3E3;
+$g-8989-cl:#898989;
+$g-70700-cl: #707070;
+$g-C0C0-cl:#C0C0C0;
+$g-F8F8-cl:#F8F8F8;
+
+
+
+//font-famili , font-size
+$fz-base: 10px;
+$font-body: 'SVN-Poppins', sans-serif;
+$fz-body: 14px;
+$lh-body: 1.4;
+$cl-body: #000000;
+
+
+//break point
+$bk-1900: 1900px;
+$bk-1500: 1500px;
+$bk-1400: 1400px;
+$bk-1200: 1200px;
+$bk-1024: 1024px;
+$bk-992: 992px;
+$bk-900: 900px;
+$bk-768: 768px;
+$bk-576: 576px;
+$bk-450: 450px;
+$bk-400: 400px;
+$bk-375: 375px;
+$bk-350: 350px;
+//break point - 1
+$bk-d-1500: $bk-1500 - 1;
+$bk-d-1200: $bk-1200 - 1;
+$bk-d-1024: $bk-1024 - 1;
+$bk-d-992: $bk-992 - 1;
+$bk-d-768: $bk-768 - 1;
+$bk-d-375: $bk-375 - 1;
+$bk-d-576: $bk-576 - 1;
+
+/*width*/
+$w-scroll: 0px;
+$max-width: 100%;
+$container-full-width: 1920px;
+$container-width: 1410px;
+$padding: 15px;
+

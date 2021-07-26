@@ -1,0 +1,91 @@
+.sec-giaiphap{
+    padding: 167px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    @include max-media(1200px){
+        padding: 100px 0;
+    }
+    &:nth-child(2n+2){
+        &::after{
+            right: 0;
+            left: auto;
+            background: linear-gradient(to left ,rgba($color: #fff, $alpha: 1.0), rgba($color: #fff, $alpha: 0));
+        }
+        .content-giaiphap{
+            margin-left: auto;
+            text-align: right;
+            .wrapper-content{
+                .txt-desc{
+                    text-align: right;
+                }
+            }
+        }
+        .wrapper-btn{
+            text-align: right;
+        }
+    }
+    &::after{
+        content: '';
+        max-width: 585px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0; 
+        top: 0;
+        background: linear-gradient(to right ,rgba($color: #fff, $alpha: 1.0), rgba($color: #fff, $alpha: 0));
+        z-index: 1;
+        @include max-media($bk-1400){
+            display: none;
+        }
+    }
+    .content-giaiphap{
+        max-width: 372px;
+        position: relative;
+        z-index: 2;
+        .txt-title{
+            @include fz-36;
+            font-weight: 400;
+            margin-bottom: 36px;
+        }
+        .wrapper-content{
+            margin-bottom: 30px;
+            .txt-desc{
+                text-align: left;
+                color: rgba($color: #000, $alpha: 0.6);
+                @include fz-16;
+                @include lh(24,16);
+            }
+        }
+        .btn{
+            max-width: 181px;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $main-cl;
+            background: #fff;
+            margin: 5px;
+            @include max-media(400px){
+                width: 100%;
+                max-width: unset;
+                margin: 5px 0;
+            }
+            &:hover{
+                color: #fff;
+                background: linear-gradient(to right, #3069BF, $main-cl);
+                
+            }
+        }
+        .wrapper-btn{
+            margin: -5px;
+            display: flex;
+            flex-wrap: wrap;
+            @include max-media($bk-400){
+                margin: -5px 0;
+            }
+            
+        }
+    }
+}

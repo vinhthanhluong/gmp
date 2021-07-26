@@ -1,0 +1,299 @@
+.sec-lienhe {
+    padding: 65px 0;
+    background-color: #f4f5f9;
+    overflow: hidden;
+
+    @include max-media($bk-d-992) {
+        padding: 40px 0;
+    }
+
+    .box-lienhe {
+        .col-4 {
+            width: calc(4 / 12 * 100%);
+            padding: 15px;
+
+            @include max-media(1200px) {
+                padding: 7.5px;
+            }
+
+            @include max-media(670px) {
+                width: 50%;
+            }
+
+            @include max-media(400px) {
+                width: 100%;
+            }
+        }
+
+        .wrapper-img {
+            margin-bottom: 25px;
+            width: max-content;
+
+            @include max-media($bk-d-1200) {
+                margin-bottom: 15px;
+            }
+
+            &:hover {
+                img {
+                    transform: rotateY(350deg);
+                }
+            }
+
+            img {
+                transition: 0.5s ease transform;
+            }
+        }
+
+        .box-content {
+            @include fz-16;
+
+            .txt-title {
+                @include fz-28;
+                font-weight: 600;
+            }
+
+            .txt-desc {
+                display: block;
+                margin: 15px 0;
+
+                @include max-media($bk-d-992) {
+                    margin: 10px 0;
+                }
+
+                @include max-media($bk-d-768) {
+                    margin: 5px 0;
+                }
+            }
+
+            .link {
+                color: $main-cl;
+                transition: all .3s ease;
+
+                &:hover {
+                    color: $main-cl-2;
+                }
+            }
+        }
+    }
+}
+
+.sec-form-lienhe {
+    overflow: hidden;
+    .wrapper-container {
+        width: calc(100% / 12 * 6);
+        margin: 0 auto;
+
+        @include max-media($bk-d-1200) {
+            width: calc(100% / 12 * 8.7);
+        }
+
+        @include max-media($bk-d-992) {
+            width: calc(100% / 12 * 10);
+        }
+
+        @include max-media($bk-d-768) {
+            width: 100%;
+        }
+    }
+
+    .txt-title {
+        // max-width: 690px;
+        text-align: center;
+        margin: auto;
+        @include fz-36;
+        margin-bottom: 30px;
+        font-weight: 600;
+        @include lh(44, 36);
+
+        @include max-media($bk-d-1200) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .wrapper-form {
+        // // max-width: 690px;
+        // margin: auto;
+        // width: calc(100% / 12 * 6);
+    }
+
+    .form-lienhe {
+
+
+        margin: -5px 0;
+
+        .f-group {
+            padding: 5px 0;
+        }
+
+        .f-flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -5px;
+
+            .col-6 {
+                width: 50%;
+                padding: 5px;
+
+                @include max-media(670px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .f-control {
+            @include fz-16;
+            border-radius: 0;
+            border-color: rgba($color: $b-cl, $alpha: .1);
+            height: 50px;
+            transition: all .3s ease;
+
+            &::placeholder {
+                color: #000;
+            }
+
+            &:hover,
+            &:focus {
+                border-color: $main-cl;
+            }
+
+        }
+
+        textarea.f-control {
+            height: 120px;
+            resize: none;
+        }
+
+        .f-btn {
+            padding-top: 25px;
+
+            @include max-media($bk-d-1200) {
+                padding-top: 20px;
+            }
+
+            @include max-media($bk-d-768) {
+                padding-top: 10px;
+            }
+        }
+
+        .btn {
+            background: $main-cl;
+            padding: 15px;
+            color: #fff;
+            font-weight: bold;
+            transition: 0.3s ease;
+            border: 1px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+                color: $main-cl;
+                background: #fff;
+                border: 1px solid $main-cl;
+            }
+        }
+    }
+}
+
+.box-tab-about {
+    border-bottom: 1px solid rgba($color: $g-70700-cl, $alpha: .3);
+    @include max-media($bk-576) {
+        padding: 15px 0;
+        border: none;
+    }
+
+    .btab-title {
+        padding: 10px 15px;
+        background-color: $main-cl;
+        color: $t-w-cl;
+        display: none;
+
+        @include max-media($bk-576) {
+            display: block;
+        }
+
+        .btab-tt {
+            i {
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .btab-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        @include max-media($bk-576) {
+            flex-direction: column;
+            background-color: rgba($color: $border-cl, $alpha: .5);
+            text-align: left;
+            padding: 10px;
+        }
+
+        .btab-item {
+            @include max-media($bk-576) {
+                width: 100%;
+            }
+            a {
+                display: inline-block;
+                padding: 20px 35px;
+               // border-bottom: 3px transparent solid;
+                @include lh(40, 24);
+                transition: all .3s ease;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 100%;
+                    border-bottom: 3px transparent solid;
+                    transition:  all .3s ease;
+                }
+                &:hover {
+                    color: $main-cl;
+                    // border-color: $main-cl;
+                    &::before{
+                        border-color: $main-cl;
+                    }
+                    @include max-media($bk-576){
+                      color: $b-cl;
+                    }
+                }
+
+                @include max-media($bk-d-992) {
+                    padding: 15px 20px;
+                }
+
+                @include max-media($bk-d-768) {
+                    padding: 10px 15px;
+                }
+                @include max-media($bk-576){
+                    border: none;
+                    width: 100%;
+                    padding: 5px 10px;
+                }
+
+            }
+
+            &.active {
+                a {
+                    color: $main-cl;
+                    &::before{
+                        border-color: $main-cl;
+                    }
+                    @include max-media($bk-576){
+                       
+                        background-color: rgba($color: $main-cl, $alpha: .4);
+                        color: $w-cl;
+                        &::before{
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}

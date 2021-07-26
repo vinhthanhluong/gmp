@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_198" data-name="Rectangle 198" width="50" height="50" transform="translate(1215 547)" fill="#253d8f" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="icon-loca" transform="translate(-1215 -547)" clip-path="url(#clip-path)">
+    <path id="Location" d="M26.667,52.083a1.667,1.667,0,0,1-.84-.227C24.976,51.36,5,39.525,5,23.75a21.667,21.667,0,1,1,43.333,0c0,15.775-19.976,27.61-20.827,28.106A1.667,1.667,0,0,1,26.667,52.083Zm0-46.667A18.354,18.354,0,0,0,8.333,23.75c0,12.167,14.633,22.33,18.333,24.7C30.367,46.08,45,35.917,45,23.75A18.354,18.354,0,0,0,26.667,5.417Zm0,28.333a10,10,0,1,1,10-10A10.011,10.011,0,0,1,26.667,33.75Zm0-16.667a6.667,6.667,0,1,0,6.667,6.667A6.674,6.674,0,0,0,26.667,17.083Z" transform="translate(1213.333 544.917)" fill="#253d8f"/>
+  </g>
+</svg>

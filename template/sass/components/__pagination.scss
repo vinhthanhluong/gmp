@@ -1,0 +1,61 @@
+.pagination {
+	margin-top: 30px;
+	overflow: hidden;
+	@include max-media($bk-d-768){
+		margin-top: 20px;
+	}
+	
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		.page-numbers {
+			width: 40px;
+			height: 40px;
+			color: rgba($color: $b-cl, $alpha: .5);
+			@include fz-18;
+			transition: all .3 ease;
+			@include lh(24, 14);
+			@include flex-mid;
+			position: relative;
+			&.current {
+				color: $main-cl;
+				margin-right: 75px;
+				@include max-media($bk-576){
+					margin-right: 50px;
+				}
+				&::after{
+					@include visible;
+				}
+			}
+			&:hover {
+				color: $main-cl;
+			}
+			&::after{
+				content: "" ;
+				width: 60px;
+				height: 1px;
+				background-color: rgba($color: $b-cl, $alpha: .2);
+				@include hidden;
+				position: absolute;
+				top: 50%;
+				left: calc(100% + 10px);
+				transform: translateY(-50%);
+				@include max-media($bk-576){
+					left: 100%;
+					width: 50px;
+				}
+			}
+		}
+
+		&:last-child{
+			.page-numbers{
+				&.current{
+					margin-right: 0;
+					&::after{
+						@include hidden;
+					}
+				}
+			}
+		}
+	}
+}

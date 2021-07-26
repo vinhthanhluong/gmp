@@ -1,0 +1,168 @@
+.banner {
+    .swiper-wrapper {
+        margin: 0;
+    }
+
+    .swiper-slide {
+        padding: 0;
+        height: 100%;
+    }
+
+    .swiper-slide>img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+    }
+
+    .swiper-button-next {
+        right: 20px;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        bottom: 0;
+    }
+
+	&.banner-360{
+		position: relative;
+		height: 900px;
+		@include max-media($bk-1900){
+			height: 700px;
+		}
+		@include max-media($bk-1400){
+			height: 500px;
+		}
+		@include max-media($bk-d-992){
+			height: 400px;
+		}
+		@include max-media($bk-d-768){
+			height: 300px;
+		}
+		iframe{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+		.banner-wrapper{
+			padding: 0;
+			@include pos-mid;
+			
+		}
+
+		.banner-title{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50% );
+			white-space: nowrap;
+			@include max-media($bk-d-992){
+				top: 60%;
+			}
+			@include min-media($bk-768){
+				animation: zoomInDown 1s; 
+		   }
+		}
+
+		.box-360{
+			@include min-media($bk-768){
+				animation: zoomIn 1s; 
+		   }
+			@include max-media($bk-d-992){
+				width: 80px;
+				height: 80px;
+				background-size: 60px;
+			}
+			@include max-media($bk-d-768){
+				width: 60px;
+				height: 60px;
+				background-size: 40px;
+			}
+
+			&::before{
+				@include max-media($bk-d-992){
+					width: 120px;
+					height: 120px;
+				}
+				@include max-media($bk-d-768){
+					width: 100px;
+					height: 100px;
+				}
+			}
+		}
+	}
+
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+	text-align: center;
+	.banner-wrapper{
+		padding: 210px 0 100px;
+		position: relative;
+		z-index: 1;
+		@include max-media($bk-1500){
+			padding: 200px 0 80px
+		}
+		@include max-media($bk-d-1200){
+			padding: 190px 0 80px
+		}
+		@include max-media($bk-d-992){
+			padding: 170px 0 50px
+		}
+		@include max-media($bk-d-768){
+			padding: 140px 0 40px
+		}
+	}
+
+    .banner-title {
+       @include lh(80,60);
+	   @include min-media($bk-768){
+			animation: backInDown .8s; 
+	   }
+    }
+	.text-after{
+		-webkit-text-stroke: 4px rgba($color: $t-w-cl, $alpha: .6);
+		-webkit-text-fill-color: transparent;
+		font-size: 200px;
+		white-space: nowrap;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50% , -50%);
+		z-index: -1;
+		@include min-media($bk-768){
+			animation: zoomIn .8s; 
+	   }
+		@include max-media($bk-1500){
+			font-size: 170px;
+		}
+		@include max-media($bk-d-1200){
+			font-size: 150px;
+		}
+		@include max-media($bk-d-1024){
+			font-size: 120px;
+			-webkit-text-stroke: 2px rgba($color: $t-w-cl, $alpha: .6);
+		}
+		@include max-media($bk-d-992){
+			font-size: 100px;
+			top: 60%;
+		}
+		@include max-media($bk-d-768){
+			font-size: 80px;
+		}
+		@include max-media($bk-d-768){
+			font-size: 60px;
+		}
+		@include max-media($bk-d-375){
+			font-size: 50px;
+		}
+	}
+
+
+}

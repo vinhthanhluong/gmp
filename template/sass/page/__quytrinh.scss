@@ -1,0 +1,74 @@
+.sec-quytrinh{
+    padding-top: 45px;
+    padding-bottom: 80px;
+    overflow: hidden;
+    .columns{
+        align-items: center;
+        @include max-media(1200px){
+            margin: -7.5px;
+        }
+        .col-6{
+            width: 50%;
+            padding: 15px;
+            @include max-media(1200px){
+                padding: 7.5px;
+            }
+            @include max-media(670px){
+                width: 100%;
+            }
+            .box-content{
+                position: relative;
+                .box-step{
+                    position: absolute;
+                    left: 0;
+                    top: -70px;
+                    @include max-media($bk-1200){
+                      top: -50px;
+                    }
+                    @include max-media(670px){
+                        top: -35px;
+                      }
+                    .txt-step{
+                        font-size: 100px;
+                        font-weight: 600;
+                        color: transparent;
+                        text-transform: uppercase;text-transform: uppercase;
+                        -webkit-text-stroke-width: 4px;
+                        -webkit-text-stroke-color: rgba($color: #000000, $alpha: 0.1);
+                        @include max-media(1200px){
+                            font-size: 80px;
+                        }
+                    }
+                }
+                .txt-title{
+                    color: $main-cl;
+                    font-weight: 600;
+                    @include fz-20;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                    @include max-media($bk-d-992){
+                        margin-bottom: 10px;
+                    }
+                    
+                }
+                .txt-desc{
+                    @include fz-16;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    .row{
+        &:not(:last-child){
+            padding-bottom: 80px;
+            @include max-media(1200px){
+                padding-bottom: 30px;
+            }
+        }
+        &:nth-child(2n+1){
+            .columns{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}

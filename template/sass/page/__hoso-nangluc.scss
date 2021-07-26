@@ -1,0 +1,115 @@
+.file {
+    background-color: #F4F5F9;
+
+    .file-inner {
+        width: calc(100% / 12 * 6 + 60px);
+        margin: 0 auto;
+
+        @include max-media($bk-d-1200) {
+            width: calc(100% / 12 * 8);
+        }
+
+        @include max-media($bk-d-992) {
+            width: calc(100% / 12 * 10);
+        }
+
+        @include max-media($bk-d-768) {
+            width: 100%;
+        }
+    }
+
+    .file-box {
+        display: flex;
+        @include max-media($bk-576){
+            display: block;
+        }
+        a{
+            display: block;
+            width: 100%;
+            &:not(:first-child){
+                margin-top: 10px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .file-action {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        @include max-media($bk-d-768){
+            margin-top: 20px;
+            
+           
+        }
+        @include max-media($bk-576){
+            flex-direction: column;
+        }
+
+        .btn-down {
+            padding: 15px 10px;
+            @include max-media($bk-576){
+                max-width: 100%;
+            }
+         
+        }
+
+        .file-share {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            transform: translateY(-50%);
+            @include max-media($bk-576){
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
+
+            p {
+                padding-right: 25px;
+            }
+
+            .file-social {
+                display: flex;
+                align-items: center;
+            }
+
+            .social-f {
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                &:not(:first-child) {
+                    margin-left: 10px;
+                }
+            }
+
+            .social-face {
+                width: 30px;
+                height: 30px;
+                border: 1px solid $main-cl;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: $main-cl;
+                    color: $w-cl;
+                }
+            }
+        }
+    }
+}
