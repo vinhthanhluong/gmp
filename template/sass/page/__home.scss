@@ -232,36 +232,42 @@
                     animation-delay: 0;
                 }
             }
+
             .home-address {
                 @include min-media($bk-768) {
                     animation: fadeInUpBig 1s;
                     animation-delay: .1s;
                 }
             }
+
             .home-email {
                 @include min-media($bk-768) {
                     animation: fadeInUpBig 1s;
                     animation-delay: .2s;
                 }
             }
+
             .home-social {
                 @include min-media($bk-768) {
                     animation: fadeInUpBig 1s;
                     animation-delay: .3s;
                 }
             }
+
             .home-phome {
                 @include min-media($bk-768) {
                     animation: fadeInUpBig 1s;
                     animation-delay: .4s;
                 }
             }
+
             .home-map {
                 @include min-media($bk-768) {
                     animation: fadeInUpBig 1s;
                     animation-delay: .5s;
                 }
             }
+
             .copy-right {
                 @include min-media($bk-768) {
                     animation: fadeInUpBig 1s;
@@ -323,7 +329,7 @@
                 &::before {
                     content: 'GMP Groups';
                     font-size: 250px;
-                    font-weight: 300;
+                    font-weight: 800;
                     -webkit-text-stroke: 4px rgba($color: $t-w-cl, $alpha: .6);
                     -webkit-text-fill-color: transparent;
                     position: absolute;
@@ -334,7 +340,7 @@
                     white-space: nowrap;
                     @include lh(40, 250);
 
-                    @include max-media($bk-1500) {
+                    @include max-media($bk-1900) {
                         font-size: 180px;
                         top: 38%;
                     }
@@ -695,7 +701,7 @@
                     padding-left: 70px;
                 }
 
-                @include max-media($bk-992) {
+                @include max-media($bk-d-992) {
                     padding-left: 30px;
                 }
             }
@@ -716,6 +722,10 @@
                         width: calc(100% / 12 * 4.5);
                     }
 
+                    @include max-media($bk-d-992) {
+                        width: calc(100% / 12 * 5);
+                    }
+
                     @include max-media($bk-d-768) {
                         width: 100%;
                     }
@@ -730,6 +740,10 @@
 
                     @include max-media($bk-1200) {
                         width: calc(100% / 12 * 7.5);
+                    }
+
+                    @include max-media($bk-d-992) {
+                        width: calc(100% / 12 * 7);
                     }
 
                     @include max-media($bk-d-768) {
@@ -790,14 +804,25 @@
 
 
             .home-bcontent {
-                margin-top: 60px;
+                margin-top: 80px;
 
                 @include max-media($bk-1900) {
-                    margin-top: 20px;
+                    margin-top: 25px;
+                }
+
+                @include max-media($bk-d-992) {
+                    margin-top: 40px;
                 }
 
                 @include max-media($bk-d-768) {
                     margin-top: 5px;
+                    position: relative;
+                }
+
+                &.active {
+                    .home-tab {
+                      @include visible;
+                    }
                 }
 
                 .home-tab-mobi {
@@ -823,7 +848,14 @@
                 .home-tab {
 
                     @include max-media($bk-d-768) {
-                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        z-index: 1;
+                        background-color: $w-cl;
+                        padding: 10px;
+                        transition: all .3s ease;
+                        @include hidden;
                     }
                 }
 
@@ -837,6 +869,10 @@
                     cursor: pointer;
                     padding: 0 20px;
 
+                    @include max-media($bk-d-1200) {
+                        padding: 0 15px;
+                    }
+
                     @include max-media($bk-d-768) {
                         padding: 0 10px;
                     }
@@ -849,10 +885,16 @@
 
                         @include max-media($bk-d-768) {
                             box-shadow: none;
+                            color: $w-cl;
+                            background-color: $main-cl;
                         }
 
                         img {
                             filter: none;
+
+                            @include max-media($bk-d-768) {
+                                filter: brightness(0) invert(1);
+                            }
                         }
 
                         p {
@@ -877,12 +919,16 @@
                         position: relative;
 
                         @include max-media($bk-d-1200) {
-                            padding: 11px 0;
+                            padding: 15px 0;
+                        }
+
+                        @include max-media($bk-d-992) {
+                            padding: 13px 0;
                         }
 
                         &::before {
                             content: '';
-                            width: 240px;
+                            width: 250px;
                             height: 1px;
                             background-color: rgba($color: $b-cl, $alpha: .1);
                             position: absolute;
@@ -892,6 +938,10 @@
                             @include max-media($bk-d-1200) {
                                 width: 200px;
                             }
+
+                            @include max-media($bk-d-768) {
+                                display: none;
+                            }
                         }
 
                     }
@@ -899,8 +949,22 @@
             }
 
             .home-content {
+                height: 100%;
+
+                .home-tab-content {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
                 .tab-content-box {
                     display: none;
+                    margin-top: auto;
+                    padding-bottom: 40px;
+
+                    @include max-media($bk-d-1200) {
+                        padding-bottom: 20px;
+                    }
 
                     &.active {
                         display: block;
@@ -911,19 +975,21 @@
 
             .home-content-box {
                 max-width: 370px;
-                padding-top: 333px;
 
-                @include max-media($bk-1500) {
-                    padding-top: 250px;
-                }
 
-                @include max-media($bk-d-992) {
-                    max-width: 100%
-                }
+                // padding-top: 333px;
 
-                @include max-media($bk-d-768) {
-                    padding-top: 0;
-                }
+                // @include max-media($bk-1500) {
+                //     padding-top: 250px;
+                // }
+
+                // @include max-media($bk-d-992) {
+                //     max-width: 100%
+                // }
+
+                // @include max-media($bk-d-768) {
+                //     padding-top: 0;
+                // }
 
                 .home-tt {
                     @include lh(44, 36);
@@ -941,6 +1007,7 @@
                 .home-desc {
                     color: rgba($color: $b-cl, $alpha: .6);
                     margin-bottom: 30px;
+                    @include lh(24, 16);
 
                     @include max-media($bk-d-1200) {
                         margin-bottom: 20px;
@@ -1826,7 +1893,7 @@
                 position: relative;
 
                 &::before {
-                    content: 'Content';
+                    content: 'Contact';
                     font-size: 300px;
                     font-weight: 900;
                     color: rgba($color: $w-cl, $alpha: .4);
@@ -1983,7 +2050,7 @@
             }
 
             .home-map {
-                max-width: 750px;
+                max-width: 1000px;
                 height: 260px;
                 background-image: url('../img/loading.gif');
                 background-repeat: no-repeat;

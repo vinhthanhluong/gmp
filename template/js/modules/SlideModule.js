@@ -34,6 +34,9 @@ export default function SlideModule() {
                 observeParents: true,
                 observeSlideChildren: true,
                 observer: true,
+                autoplay: {
+                    delay: 5000,
+                },
                 breakpoints: {
                     320: {
                         slidesPerView: 5,
@@ -370,7 +373,7 @@ export default function SlideModule() {
                     576: {
                         spaceBetween: 30,
                     },
-                   
+
                 }
 
             })

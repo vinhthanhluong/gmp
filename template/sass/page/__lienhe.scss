@@ -195,7 +195,7 @@
 
 .box-tab-about {
     border-bottom: 1px solid rgba($color: $g-70700-cl, $alpha: .3);
-    @include max-media($bk-576) {
+    @include max-media($bk-d-768) {
         padding: 15px 0;
         border: none;
     }
@@ -206,7 +206,7 @@
         color: $t-w-cl;
         display: none;
 
-        @include max-media($bk-576) {
+        @include max-media($bk-d-768) {
             display: block;
         }
 
@@ -223,7 +223,7 @@
         justify-content: center;
         text-align: center;
 
-        @include max-media($bk-576) {
+        @include max-media($bk-d-768) {
             flex-direction: column;
             background-color: rgba($color: $border-cl, $alpha: .5);
             text-align: left;
@@ -231,7 +231,7 @@
         }
 
         .btab-item {
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
                 width: 100%;
             }
             a {
@@ -267,10 +267,11 @@
 
                 @include max-media($bk-d-768) {
                     padding: 10px 15px;
-                }
-                @include max-media($bk-576){
                     border: none;
                     width: 100%;
+                 
+                }
+                @include max-media($bk-576){
                     padding: 5px 10px;
                 }
 
@@ -282,7 +283,7 @@
                     &::before{
                         border-color: $main-cl;
                     }
-                    @include max-media($bk-576){
+                    @include max-media($bk-d-768){
                        
                         background-color: rgba($color: $main-cl, $alpha: .4);
                         color: $w-cl;

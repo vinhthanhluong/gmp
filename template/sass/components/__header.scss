@@ -934,7 +934,7 @@
             top: 0;
             left: 30px;
             font-size: 300px;
-            font-weight: 300;
+            font-weight: 800;
             -webkit-text-stroke: 4px rgba($color: $t-w-cl, $alpha: .6);
             -webkit-text-fill-color: transparent;
             @include lh(130, 300);
@@ -944,7 +944,7 @@
             }
 
             @include max-media($bk-d-1200) {
-                font-size: 190px;
+                font-size: 180px;
                 -webkit-text-stroke: 2px rgba($color: $t-w-cl, $alpha: .6);
             }
 
